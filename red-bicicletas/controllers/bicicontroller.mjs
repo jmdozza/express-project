@@ -1,7 +1,7 @@
-import {Bicicleta} from "../models/bicicleta.mjs";
+import Bicicleta from "../models/bicicleta.mjs";
 
-export const bicicleta_list= function(req,res){
-    res.render('bicicletas/index',{bicis:Bicicleta.allBicis});
+export const bicicleta_list=  function(req,res){
+    res.render('bicicletas/index',{bicis:  Bicicleta.allBicis});
 }
 
 export const bici_create_get=function(req,res){

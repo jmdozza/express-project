@@ -4,11 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//Estamos importando los archivos donde estan las rutas (todos en la carpeta rutas)
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var biciRouter= require('./routes/bicicletas');
 var biciRouterApi= require('./routes/api/bicicletas');
 
+//db
+var db= require('./config/database.js')
 var app = express();
 
 // view engine setup
@@ -20,6 +23,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Definimos las rutas de nuestra página y como parametro le pasamos las rutas que a su
+//vez van a tener
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
