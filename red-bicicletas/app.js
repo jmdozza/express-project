@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var biciRouter= require('./routes/bicicletas');
 var biciRouterApi= require('./routes/api/bicicletas');
+var userRouterApi=require('./routes/api/usersApiRoute');
 
 //db
 var db= require('./config/database.js')
@@ -31,6 +32,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/bicicletas', biciRouter);
 app.use('/api/bicicletas',biciRouterApi);
+app.use('/api/users',userRouterApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

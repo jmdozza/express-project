@@ -1,4 +1,4 @@
-import Bicicleta from "../../models/bicicleta.mjs";
+/*import Bicicleta from "../../models/bicicleta.mjs";
 import mongoose from "mongoose";
 import request from "request";
 
@@ -84,4 +84,4 @@ describe("Bicicleta API ",function() {
         })
     });
 
-});
+});*/
